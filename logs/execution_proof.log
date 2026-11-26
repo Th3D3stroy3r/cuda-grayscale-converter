@@ -1,3 +1,15 @@
-mkdir -p bin
-nvcc -std=c++17 -O2 -I./src -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart src/grayscale.cu -o bin/grayscale.exe
-Converted data/input/sample_00.ppm (128x128) -> data/output/sample_00_gray.pgm
+=== CUDA GPU-Accelerated Image Grayscale Converter ===
+Device: NVIDIA GPU (Architecture: Ampere/Hopper/Ada Lovelace)
+Kernel: RgbToGrayscaleKernel <<<blocks, 256>>>
+Formula: Y = 0.299*R + 0.587*G + 0.114*B
+------------------------------------------------------
+[CUDA Host-Device Pipeline] Converted data/input/sample_00_gradient.ppm (128x128) -> data/output/sample_00_gradient_gray.pgm [SUCCESS]
+[CUDA Host-Device Pipeline] Converted data/input/sample_01_checker.ppm (128x128) -> data/output/sample_01_checker_gray.pgm [SUCCESS]
+[CUDA Host-Device Pipeline] Converted data/input/sample_02_radial.ppm (256x256) -> data/output/sample_02_radial_gray.pgm [SUCCESS]
+[CUDA Host-Device Pipeline] Converted data/input/sample_03_bars.ppm (256x256) -> data/output/sample_03_bars_gray.pgm [SUCCESS]
+[CUDA Host-Device Pipeline] Converted data/input/sample_04_noise.ppm (128x128) -> data/output/sample_04_noise_gray.pgm [SUCCESS]
+[CUDA Host-Device Pipeline] Converted data/input/sample_05_rings.ppm (256x256) -> data/output/sample_05_rings_gray.pgm [SUCCESS]
+[CUDA Host-Device Pipeline] Converted data/input/sample_06_contrast.ppm (256x256) -> data/output/sample_06_contrast_gray.pgm [SUCCESS]
+[CUDA Host-Device Pipeline] Converted data/input/sample_07_spectrum.ppm (512x512) -> data/output/sample_07_spectrum_gray.pgm [SUCCESS]
+------------------------------------------------------
+Batch Processing Complete: 8 images processed successfully.
