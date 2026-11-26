@@ -1,0 +1,3 @@
+mkdir -p bin
+nvcc -std=c++17 -O2 -I./src -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart src/grayscale.cu -o bin/grayscale.exe
+Converted data/input/sample_00.ppm (128x128) -> data/output/sample_00_gray.pgm
